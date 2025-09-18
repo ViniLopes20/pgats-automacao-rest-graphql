@@ -1,0 +1,38 @@
+[
+    {
+        "nomeTeste": "quando não informo o login",
+        "registerBody": {
+            "login": "",
+            "password": "123"
+        },
+        "status": 400,
+        "mensagem": "Login e senha são obrigatórios"
+    },
+    {
+        "nomeTeste": "quando não informo a senha",
+        "registerBody": {
+            "login": "vini",
+            "password": ""
+        },
+        "status": 400,
+        "mensagem": "Login e senha são obrigatórios"
+    },
+    {
+        "nomeTeste": "quando não informo o login e a senha",
+        "registerBody": {
+            "login": "",
+            "password": ""
+        },
+        "status": 400,
+        "mensagem": "Login e senha são obrigatórios"
+    },
+    {
+        "nomeTeste": "quando tento cadastrar um usuário que já existe",
+        "registerBody": {
+            "login": "admin",
+            "password": "12345678"
+        },
+        "status": 409,
+        "mensagem": "Usuário já cadastrado"
+    }
+]

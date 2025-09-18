@@ -1,0 +1,12 @@
+[
+    {
+        "nomeTeste": "quando o token não é fornecido",
+        "token": "",
+        "message": "Token não fornecido"
+    },
+    {
+        "nomeTeste": "quando o token é inválido",
+        "token": "invalid_token",
+        "message": "Token inválido"
+    }
+]

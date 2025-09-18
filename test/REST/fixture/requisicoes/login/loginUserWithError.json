@@ -1,0 +1,23 @@
+[
+    {
+        "nomeTeste": "quando informo o login incorretamente",
+        "loginBody": {
+            "login": "login_errado",
+            "password": "12345678"
+        }
+    },
+    {
+        "nomeTeste": "quando informo a senha incorretamente",
+        "loginBody": {
+            "login": "admin",
+            "password": "senha_errada"
+        }
+    },
+    {
+        "nomeTeste": "quando informo login e senha incorretos",
+        "loginBody": {
+            "login": "login_errado",
+            "password": "senha_errada"
+        }
+    }
+]
