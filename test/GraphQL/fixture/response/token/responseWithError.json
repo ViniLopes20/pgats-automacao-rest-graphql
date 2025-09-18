@@ -1,0 +1,10 @@
+[
+    {
+        "nomeTeste": "quando o token não é fornecido",
+        "token": ""
+    },
+    {
+        "nomeTeste": "quando o token é inválido",
+        "token": "invalid_token"
+    }
+]
