@@ -1,0 +1,30 @@
+[
+    {
+        "nomeTeste": "quando não informo o login",
+        "mutationUser": {
+            "query": "mutation { registerUser(login: \"\", password: \"123\") { login } }"
+        },
+        "mensagem": "Login e senha são obrigatórios"
+    },
+    {
+        "nomeTeste": "quando não informo a senha",
+        "mutationUser": {
+            "query": "mutation { registerUser(login: \"vini\", password: \"\") { login } }"
+        },
+        "mensagem": "Login e senha são obrigatórios"
+    },
+    {
+        "nomeTeste": "quando não informo o login e a senha",
+        "mutationUser": {
+            "query": "mutation { registerUser(login: \"\", password: \"\") { login } }"
+        },
+        "mensagem": "Login e senha são obrigatórios"
+    },
+    {
+        "nomeTeste": "quando tento cadastrar um usuário que já existe",
+        "mutationUser": {
+            "query": "mutation { registerUser(login: \"admin\", password: \"12345678\") { login } }"
+        },
+        "mensagem": "Usuário já cadastrado"
+    }
+]
