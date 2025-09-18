@@ -1,0 +1,20 @@
+[
+    {
+        "nomeTeste": "quando informo o login incorretamente",
+        "mutationLogin": {
+            "query": "mutation { login(login: \"login_errado\", password: \"12345678\") { token } }"
+        }
+    },
+    {
+        "nomeTeste": "quando informo a senha incorretamente",
+        "mutationLogin": {
+            "query": "mutation { login(login: \"admin\", password: \"senha_errada\") { token } }"
+        }
+    },
+    {
+        "nomeTeste": "quando informo login e senha incorretos",
+        "mutationLogin": {
+            "query": "mutation { login(login: \"login_errado\", password: \"senha_errada\") { token } }"
+        }
+    }
+]

@@ -1,0 +1,3 @@
+{
+    "query": "mutation { registerUser(login: \"vini\", password: \"123\") { login } }"
+}
