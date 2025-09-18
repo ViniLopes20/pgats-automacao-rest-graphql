@@ -1,0 +1,41 @@
+[
+    {
+        "nomeTeste": "Erro deve ocorrer ao tentar cadastrar nota menor que 0",
+        "mockReturn": {
+            "status": 400,
+            "message": "Nota não pode ser menor que 0"
+        },
+        "registerNotasBody": {
+            "matricula": "123",
+            "nota": -1
+        },
+        "status": 400,
+        "mensagem": "Nota não pode ser menor que 0"
+    },
+    {
+        "nomeTeste": "Erro deve ocorrer ao tentar cadastrar nota maior que 10",
+        "mockReturn": {
+            "status": 400,
+            "message": "Nota não pode ser maior que 10"
+        },
+        "registerNotasBody": {
+            "matricula": "123",
+            "nota": 11
+        },
+        "status": 400,
+        "mensagem": "Nota não pode ser maior que 10"
+    },
+    {
+        "nomeTeste": "Erro deve ocorrer ao tentar cadastrar nota para aluno inexistente",
+        "mockReturn": {
+            "status": 404,
+            "message": "Aluno não encontrado"
+        },
+        "registerNotasBody": {
+            "matricula": "999",
+            "nota": 8
+        },
+        "status": 404,
+        "mensagem": "Aluno não encontrado"
+    }
+]
