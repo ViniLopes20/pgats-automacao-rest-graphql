@@ -1,0 +1,23 @@
+[
+    {
+        "nomeTeste": "Erro deve ocorrer ao tentar cadastrar nota menor que 0",
+        "mutationNotas": {
+            "query": "mutation { addNota(matricula: \"1\", nota: -1) }"
+        },
+        "mensagem": "Nota não pode ser menor que 0"
+    },
+    {
+        "nomeTeste": "Erro deve ocorrer ao tentar cadastrar nota maior que 10",
+        "mutationNotas": {
+            "query": "mutation { addNota(matricula: \"1\", nota: 11) }"
+        },
+        "mensagem": "Nota não pode ser maior que 10"
+    },
+    {
+        "nomeTeste": "Erro deve ocorrer ao tentar cadastrar nota para aluno inexistente",
+        "mutationNotas": {
+            "query": "mutation { addNota(matricula: \"999\", nota: 8) }"
+        },
+        "mensagem": "Aluno não encontrado"
+    }
+]

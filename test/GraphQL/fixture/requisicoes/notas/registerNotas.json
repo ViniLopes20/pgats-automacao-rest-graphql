@@ -1,0 +1,3 @@
+{
+    "query": "mutation { addNota(matricula: \"2\", nota: 8.9) }"
+}
