@@ -23,16 +23,27 @@ jobs:
         run: npm install
 
       - name: Create .env file
-        run: echo "BASE_URL_REST=${{ secrets.BASE_URL_REST }}" >> .env
+        run: |
+          echo "BASE_URL_REST=${{ secrets.BASE_URL_REST }}" >> .env
+          echo "BASE_URL_GRAPHQL=${{ secrets.BASE_URL_GRAPHQL }}" >> .env
 
       - name: Run controller tests
         run: npm run test:controller
 
       - name: Run REST Server API
-        run: npm start &
+        run: npm run start:rest &
 
       - name: Wait REST Server API to start
         run: sleep 5
 
       - name: Run REST external tests
-        run: npm run test:external
+        run: npm run test:external:rest
+
+      - name: Run GraphQL Server API
+        run: npm run start:graphql &
+
+      - name: Wait GraphQL Server API to start
+        run: sleep 5
+
+      - name: Run GraphQL external tests
+        run: npm run test:external:graphql
