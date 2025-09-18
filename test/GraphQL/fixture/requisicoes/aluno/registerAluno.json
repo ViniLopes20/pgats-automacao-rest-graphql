@@ -1,0 +1,3 @@
+{
+    "query": "mutation { registerAluno(nome: \"Lopes Silva\") { matricula nome notas } }"
+}

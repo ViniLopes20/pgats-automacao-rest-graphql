@@ -1,0 +1,3 @@
+{
+    "query": "query { alunos { matricula nome notas } }"
+}
